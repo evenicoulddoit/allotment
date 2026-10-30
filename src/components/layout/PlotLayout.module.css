@@ -46,3 +46,12 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+.dot {
+  flex: none;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-inline: 0.05rem;
+  border-radius: 50%;
+  background: var(--muted);
+}
