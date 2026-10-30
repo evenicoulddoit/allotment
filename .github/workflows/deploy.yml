@@ -26,9 +26,9 @@ jobs:
           cache: npm
 
       - run: npm ci
+      # GitHub sets GITHUB_ACTIONS=true for every action step already, so
+      # vite.config.ts picks up the /allotment/ base without extra config.
       - run: npm run build
-        env:
-          GITHUB_ACTIONS: 'true'
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
