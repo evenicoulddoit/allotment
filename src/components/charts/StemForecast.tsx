@@ -38,7 +38,12 @@ export function StemForecast() {
                   style={{ left: `${(row.card / MAX) * 100}%` }}
                   title={`Card estimate ${row.card}`}
                 />
-                <span className={styles.value}>{row.cautious}</span>
+                <span
+                  className={`${styles.value} ${row.card / MAX > 0.88 ? styles.valueIn : ''}`}
+                  style={{ left: `${(row.card / MAX) * 100}%` }}
+                >
+                  {row.cautious}
+                </span>
               </span>
             </div>
           ))}

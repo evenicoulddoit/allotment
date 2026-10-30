@@ -35,6 +35,8 @@
   display: flex;
   align-items: center;
   height: 1.15rem;
+  /* Room on the right for the value label past the longest bar. */
+  padding-right: 2.6rem;
 }
 
 .bar {
@@ -54,12 +56,21 @@
   transform: translateX(-1px);
 }
 
+/* The number sits just past the card-estimate tick, so it never lands on
+   the tick itself or on the end of the bar. */
 .value {
-  margin-left: 0.35rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(0.35rem, -50%);
   font-size: 0.68rem;
   font-variant-numeric: tabular-nums;
   color: var(--muted);
   white-space: nowrap;
+}
+
+/* Near the right edge the label would overflow, so tuck it back inside. */
+.valueIn {
+  transform: translate(-100%, -50%) translateX(-0.35rem);
 }
 
 .caption {

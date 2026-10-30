@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { Section } from '../../content/sections'
-import { neighbours, sectionHref } from '../../content/sections'
+import { neighbours, sectionPath } from '../../content/sections'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { Markdown } from '../markdown/MarkdownLazy'
 import styles from './SectionPage.module.css'
@@ -64,7 +64,7 @@ export function SectionPage({ section }: { section: Section }) {
 
       <nav className={styles.pager} aria-label="Previous and next section">
         {prev ? (
-          <Link to={sectionHref(prev.id)} className={styles.pagerLink}>
+          <Link to={sectionPath(prev.id)} className={styles.pagerLink}>
             <span className={styles.pagerDir}>Previous</span>
             <span className={styles.pagerTitle}>{prev.title}</span>
           </Link>
@@ -72,7 +72,7 @@ export function SectionPage({ section }: { section: Section }) {
           <span />
         )}
         {next && (
-          <Link to={sectionHref(next.id)} className={`${styles.pagerLink} ${styles.pagerNext}`}>
+          <Link to={sectionPath(next.id)} className={`${styles.pagerLink} ${styles.pagerNext}`}>
             <span className={styles.pagerDir}>Next</span>
             <span className={styles.pagerTitle}>{next.title}</span>
           </Link>

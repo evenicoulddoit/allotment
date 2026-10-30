@@ -279,8 +279,15 @@ export const SECTIONS_BY_PART: Record<number, Section[]> = SECTIONS.reduce<
   return acc
 }, {})
 
-export function sectionHref(id: string): string {
-  return `#/${id}`
+/**
+ * The router path for a section, e.g. "/p3/calendar".
+ *
+ * Deliberately without a leading "#": HashRouter adds the hash itself, so
+ * returning "#/p3/calendar" here turned a click into ".../#/p1/findings#/p3/calendar"
+ * and the route never changed.
+ */
+export function sectionPath(id: string): string {
+  return `/${id}`
 }
 
 /** The first section of each part — used as the target for a bare part link. */

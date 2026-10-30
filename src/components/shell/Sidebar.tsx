@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import { PARTS } from '../../content/parts'
-import { SECTIONS_BY_PART, sectionHref } from '../../content/sections'
+import { SECTIONS_BY_PART, sectionPath } from '../../content/sections'
 import styles from './Sidebar.module.css'
 
 export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -56,7 +56,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
                 {SECTIONS_BY_PART[part.id]?.map((s) => (
                   <li key={s.id}>
                     <NavLink
-                      to={sectionHref(s.id)}
+                      to={sectionPath(s.id)}
                       className={({ isActive }) =>
                         `${styles.link} ${isActive ? styles.active : ''}`
                       }
