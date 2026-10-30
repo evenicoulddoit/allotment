@@ -42,7 +42,7 @@ const BEDS: Bed[] = [
   { n: 1, x: 3, y: 42, w: 14, h: 96, fill: COLOURS.wedding, label: 'Wedding annuals', vertical: true },
   { n: 2, x: 22, y: 42, w: 14, h: 50, fill: COLOURS.brassica, label: 'Brassica block', vertical: true },
   { n: 3, x: 22, y: 97, w: 14, h: 41, fill: COLOURS.strawberry, label: 'Strawberries', vertical: true },
-  { n: 4, x: 3, y: 22, w: 20, h: 13, fill: COLOURS.perennials, label: 'Perennials & foliage' },
+  { n: 4, x: 3, y: 22, w: 20, h: 13, fill: COLOURS.perennials, label: 'Perennials' },
   { n: 5, x: 46, y: 42, w: 14, h: 37, fill: COLOURS.roots, label: 'Onions and chives', vertical: true },
   { n: 6, x: 46, y: 80, w: 14, h: 58, fill: COLOURS.roots, label: 'Carrots and beetroot', vertical: true },
   { n: 7, x: 63, y: 42, w: 14, h: 60, fill: COLOURS.summer, label: 'Summer cutting and drying', vertical: true },
@@ -53,8 +53,8 @@ const BEDS: Bed[] = [
 ]
 
 const PLANTERS = [
-  { id: 'T', x: 10, y: 128, label: 'Tulips + alliums' },
-  { id: 'R', x: 47, y: 128, label: 'Ranunculus' },
+  { id: 'T', x: 12, y: 129, label: 'Tulips' },
+  { id: 'R', x: 47, y: 129, label: 'Ranunculus' },
   { id: 'S1', x: 26, y: 23, label: 'Sweet peas' },
   { id: 'S2', x: 40, y: 23, label: 'Sweet peas' },
 ]
