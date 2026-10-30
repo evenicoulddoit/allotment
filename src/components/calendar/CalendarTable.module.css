@@ -1,0 +1,83 @@
+.wrap {
+  overflow-x: auto;
+  border: var(--hairline);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.table {
+  width: 100%;
+  min-width: 34rem;
+  font-size: 0.78rem;
+}
+
+.table th,
+.table td {
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid var(--grid);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--surface-sunk);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+  z-index: 1;
+}
+
+.plant {
+  font-weight: 600;
+  border-right: var(--hairline);
+  max-width: 15rem;
+}
+
+.note {
+  display: block;
+  margin-top: 0.1rem;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.firstOfPlant td {
+  border-top: 1px solid var(--rule);
+}
+
+.cont {
+  color: var(--muted);
+}
+
+.jobCell {
+  white-space: nowrap;
+}
+
+.jobDot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.35rem;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.58rem;
+  font-weight: 700;
+  vertical-align: -0.1rem;
+}
+
+.dates {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.noteCell {
+  color: var(--muted);
+  font-size: 0.72rem;
+}

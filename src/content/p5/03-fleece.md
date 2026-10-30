@@ -1,0 +1,5 @@
+- **Choose the weight.** 17 gsm keeps out insects and gives about 1–2 °C of frost protection. 30 gsm gives about 3–4 °C.
+- **Drape loosely.** Leave slack for growth, or lift it on hoops 40–60 cm high so it never rests on wet foliage (ranunculus, sweet peas).
+- **Seal every edge.** Bury it, or weigh it with soil, pegs, bricks or boards. Overlap joins by 15 cm. Gaps defeat both frost and insect protection.
+- **For frost:** on at dusk, off on mild days (above about 5 °C) so plants can ventilate and do not go mouldy. Use a double layer in hard frost. In the cold frame, lay it directly over the trays under the lid.
+- **For insects** (allium leaf miner in Oct–Nov and Mar–Apr, flea beetle on brassicas): fit it at planting, sealed all round, and leave it on through the risk window.

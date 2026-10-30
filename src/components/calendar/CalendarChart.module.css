@@ -1,0 +1,206 @@
+.frame {
+  position: relative;
+  border: var(--hairline);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Below the desktop breakpoint the plot scrolls sideways while the plant
+   names stay pinned to the left edge. The radius lives here rather than on
+   .frame so the clipped corner does not also clip the scrolling content. */
+.scroll {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  -webkit-overflow-scrolling: touch;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: var(--label-w) minmax(0, 1fr);
+  --label-w: clamp(7rem, 30vw, 13.5rem);
+  min-width: calc(var(--label-w) + 34rem);
+}
+
+.corner {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  background: var(--surface);
+  border-bottom: var(--hairline);
+}
+
+.axis {
+  position: relative;
+  height: 1.9rem;
+  border-bottom: var(--hairline);
+}
+
+.monthLabel {
+  position: absolute;
+  bottom: 0.35rem;
+  transform: translateX(-50%);
+  font-size: 0.68rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* First label sits on the left edge, so nudge it inside the plot. */
+.monthLabel:first-of-type {
+  transform: translateX(-30%);
+}
+
+.harvestLabel {
+  position: absolute;
+  bottom: 0.3rem;
+  transform: translateX(-50%);
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--marker);
+  white-space: nowrap;
+  background: var(--surface);
+  padding: 0 0.15rem;
+}
+
+.row {
+  display: contents;
+}
+
+.name {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.05rem;
+  min-height: 26px;
+  padding: 0.15rem 0.5rem 0.15rem 0.6rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--grid);
+  font-size: 0.72rem;
+  line-height: 1.25;
+}
+
+.plantName {
+  font-weight: 600;
+}
+
+.plantNote {
+  color: var(--muted);
+  font-size: 0.66rem;
+}
+
+.plot {
+  position: relative;
+  min-height: 26px;
+  border-bottom: 1px solid var(--grid);
+}
+
+.gridline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--grid);
+}
+
+.connector {
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  background: var(--rule);
+  transform: translateY(-50%);
+}
+
+.marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 2px dashed var(--marker);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.bar {
+  position: absolute;
+  top: 50%;
+  height: 10px;
+  min-width: 4px;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  padding: 0;
+  /* Enlarge the hit area into the row gap without moving the bar. */
+  outline-offset: 2px;
+}
+
+.bar::after {
+  content: '';
+  position: absolute;
+  inset: -8px -2px;
+}
+
+.bar:hover,
+.bar:focus-visible {
+  filter: brightness(1.12);
+}
+
+.bar:focus-visible {
+  outline: 2px solid var(--ink);
+}
+
+.tip {
+  position: fixed;
+  z-index: 60;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  max-width: 15rem;
+  padding: 0.5rem 0.65rem;
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius);
+  font-size: 0.74rem;
+  line-height: 1.35;
+  box-shadow: 0 4px 14px rgb(22 35 28 / 22%);
+  pointer-events: none;
+}
+
+.tipJob {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tipJob::before {
+  content: '';
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.3rem;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.tipPlant {
+  font-weight: 600;
+}
+
+.tipDates {
+  font-variant-numeric: tabular-nums;
+  color: #d6ded3;
+}
+
+.tipNote {
+  color: #c3cfc7;
+  font-style: italic;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    --label-w: 15rem;
+    min-width: 0;
+  }
+}

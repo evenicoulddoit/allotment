@@ -1,0 +1,38 @@
+.shell {
+  min-height: 100vh;
+}
+
+.main {
+  padding: var(--space-5) var(--space-4) var(--space-7);
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+.main:focus {
+  outline: none;
+}
+
+.footer {
+  margin-top: var(--space-7);
+  padding-top: var(--space-4);
+  border-top: var(--hairline);
+  color: var(--muted);
+  font-size: var(--fs-small);
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (min-width: 900px) {
+  .main {
+    margin-left: var(--sidebar-w);
+    max-width: none;
+    padding: var(--space-6) var(--space-6) var(--space-7);
+  }
+
+  .footer,
+  .main > :global(.page) {
+    max-width: 56rem;
+  }
+}

@@ -1,0 +1,46 @@
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--topbar-h);
+  padding: 0 var(--space-2);
+  background: color-mix(in srgb, var(--page) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: var(--hairline);
+}
+
+.where {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap);
+  height: var(--tap);
+  margin-inline: -0.35rem;
+  border-radius: var(--radius);
+  color: var(--muted);
+}
+
+.iconBtn:hover {
+  background: var(--surface-sunk);
+  color: var(--ink);
+}
+
+@media (min-width: 900px) {
+  .bar {
+    margin-left: var(--sidebar-w);
+  }
+}

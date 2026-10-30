@@ -1,0 +1,70 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.1rem 0.4rem 0.1rem 0.3rem;
+  border-radius: var(--radius-pill);
+  color: var(--on-job);
+  font-size: var(--fs-caption);
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.label {
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.compact {
+  padding: 0;
+  width: 1.05rem;
+  height: 1.05rem;
+  justify-content: center;
+  border-radius: 3px;
+  font-size: 0.6rem;
+}
+
+.compact .label {
+  display: none;
+}
+
+.verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: var(--radius);
+  font-size: var(--fs-caption);
+  font-weight: 600;
+  line-height: 1.6;
+  border: 1px solid var(--rule);
+  background: var(--surface-sunk);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+
+.ok {
+  border-color: #15803d;
+}
+
+.warn {
+  border-color: var(--accent-c);
+  background: #fdf6e0;
+}
+
+.gamble {
+  border-color: var(--accent-b);
+  background: #f8f1e8;
+}
+
+.fail {
+  border-color: var(--marker);
+  background: #fbeaf0;
+}
+
+.unknown {
+  border-style: dashed;
+}

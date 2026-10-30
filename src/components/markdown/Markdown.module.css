@@ -1,0 +1,105 @@
+/* Prose is capped at a comfortable measure, while tables and widget mounts
+   run to the full content width so the calendar and plant cards get the room
+   they need. Cap the text elements rather than the container, so the
+   container's own max-width is the only thing limiting the widgets. */
+.prose > :is(p, ul, ol, blockquote, h2, h3, h4) {
+  max-width: var(--measure);
+}
+
+.p {
+  margin: 0 0 var(--space-4);
+}
+
+.h2 {
+  font-size: var(--fs-h2);
+  margin: var(--space-6) 0 var(--space-3);
+}
+
+.h3 {
+  font-size: var(--fs-h3);
+  margin: var(--space-5) 0 var(--space-2);
+}
+
+.h4 {
+  font-size: var(--fs-h4);
+  margin: var(--space-4) 0 var(--space-2);
+}
+
+.h2:first-child,
+.h3:first-child,
+.h4:first-child {
+  margin-top: 0;
+}
+
+.list {
+  margin: 0 0 var(--space-4);
+  padding-left: 1.15rem;
+}
+
+.list li::marker {
+  color: var(--muted);
+}
+
+.quote {
+  margin: 0 0 var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--marker);
+  background: var(--surface);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--muted);
+}
+
+.a {
+  color: var(--ink);
+  text-decoration-color: var(--marker);
+  text-decoration-thickness: 1px;
+}
+
+/* Tables get the bible's squarish grey-header treatment. */
+.tableWrap {
+  overflow-x: auto;
+  margin: 0 0 var(--space-5);
+  border: var(--hairline);
+  border-radius: var(--radius);
+  background: var(--surface);
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  min-width: 32rem;
+  font-size: var(--fs-small);
+}
+
+.table th,
+.table td {
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  background: var(--surface-sunk);
+  font-weight: 600;
+  font-size: var(--fs-caption);
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.table tr:last-child td {
+  border-bottom: 0;
+}
+
+.table td:first-child {
+  font-weight: 500;
+}
+
+.unknownWidget {
+  padding: var(--space-3);
+  border: 1px dashed var(--marker);
+  border-radius: var(--radius);
+  color: var(--marker);
+  font-size: var(--fs-small);
+}

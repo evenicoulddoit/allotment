@@ -1,0 +1,66 @@
+/* Design tokens extracted from revised-plan-2026-10-29.pdf.
+   These are the single source of truth for the visual system. */
+:root {
+  /* Surfaces */
+  --page: #f3f6f1;
+  --surface: #ffffff;
+  --surface-sunk: #edf1ea;
+  --rule: #d6ded3;
+  --grid: #e5eae2;
+
+  /* Text */
+  --ink: #16231c;
+  --muted: #586960;
+
+  /* The five jobs. Each clears 4.5:1 against both --page and --surface. */
+  --sow: #c2410c;
+  --potup: #7e22ce;
+  --harden: #0369a1;
+  --plant: #15803d;
+  --harvest: #be185d;
+  --on-job: #ffffff;
+
+  /* Annotations and accents */
+  --marker: #b03466;
+  --accent-a: #2b5a44;
+  --accent-b: #9a6e3f;
+  --accent-c: #e9b800;
+
+  /* Geometry */
+  --radius: 4px;
+  --radius-pill: 6px;
+  --tap: 44px;
+  --hairline: 1px solid var(--rule);
+
+  /* Type scale, converted from the PDF's points. */
+  --fs-display: clamp(2rem, 1.2rem + 3.2vw, 2.9rem);
+  --fs-h2: clamp(1.4rem, 1.15rem + 1vw, 1.75rem);
+  --fs-h3: 1.25rem;
+  --fs-h4: 1.05rem;
+  --fs-lead: 1.0625rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-eyebrow: 0.6875rem;
+  --fs-caption: 0.78rem;
+
+  --lh-tight: 1.15;
+  --lh-body: 1.55;
+  --measure: 68ch;
+
+  /* The emoji families come after Inter so the verdict marks (✅ ⚠ 🎲 ❌ ❓)
+     always have a glyph; Inter has none of them. */
+  --font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+    'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji';
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  --sidebar-w: 17rem;
+  --topbar-h: 3.25rem;
+}

@@ -1,0 +1,30 @@
+@media print {
+  :root {
+    --page: #fff;
+  }
+
+  body {
+    background: #fff;
+    font-size: 11pt;
+  }
+
+  header[class*='bar'],
+  nav[class*='sidebar'],
+  div[class*='backdrop'] {
+    display: none !important;
+  }
+
+  main {
+    margin-left: 0 !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  details {
+    display: block !important;
+  }
+
+  details > * {
+    display: block !important;
+  }
+}

@@ -1,0 +1,93 @@
+.page {
+  max-width: 68rem;
+}
+
+.header {
+  margin-bottom: var(--space-5);
+}
+
+.eyebrow {
+  margin: 0 0 var(--space-2);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--marker);
+}
+
+.title {
+  font-size: var(--fs-display);
+  letter-spacing: -0.025em;
+  line-height: 1.04;
+  max-width: 20ch;
+}
+
+.standfirst {
+  margin: var(--space-3) 0 0;
+  max-width: 58ch;
+  font-size: var(--fs-lead);
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.rule {
+  border: 0;
+  border-top: 2px solid var(--ink);
+  margin: var(--space-5) 0 0;
+}
+
+.loading,
+.error {
+  color: var(--muted);
+  font-size: var(--fs-small);
+}
+
+.error {
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--marker);
+  border-radius: var(--radius);
+}
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-7);
+  padding-top: var(--space-4);
+  border-top: var(--hairline);
+}
+
+.pagerLink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 22rem;
+  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+}
+
+
+.pagerLink:hover {
+  background: var(--surface-sunk);
+}
+
+.pagerNext {
+  text-align: right;
+  margin-left: auto;
+}
+
+.pagerDir {
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pagerTitle {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  line-height: 1.3;
+}

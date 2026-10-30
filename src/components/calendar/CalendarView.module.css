@@ -1,0 +1,41 @@
+.view {
+  margin: 0 0 var(--space-4);
+}
+
+.controls {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.viewToggle {
+  display: inline-flex;
+  padding: 2px;
+  border: var(--hairline);
+  border-radius: var(--radius);
+  background: var(--surface);
+  margin-bottom: var(--space-3);
+}
+
+.viewBtn {
+  padding: 0.28rem 0.55rem;
+  border-radius: 3px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.viewActive {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.footnote {
+  margin: var(--space-3) 0 0;
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: var(--fs-caption);
+}

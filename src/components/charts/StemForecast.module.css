@@ -1,0 +1,143 @@
+.wrap {
+  margin-bottom: var(--space-5);
+}
+
+.figure {
+  margin: 0 0 var(--space-5);
+  padding: var(--space-3) var(--space-3) var(--space-2);
+  background: var(--surface);
+  border: var(--hairline);
+  border-radius: var(--radius);
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 9.5rem) 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.74rem;
+}
+
+.name {
+  text-align: right;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 1.15rem;
+}
+
+.bar {
+  height: 0.78rem;
+  min-width: 2px;
+  background: var(--accent-a);
+  border-radius: 0 3px 3px 0;
+}
+
+.tick {
+  position: absolute;
+  top: 0.05rem;
+  width: 2px;
+  height: 0.95rem;
+  background: var(--accent-c);
+  border-radius: 1px;
+  transform: translateX(-1px);
+}
+
+.value {
+  margin-left: 0.35rem;
+  font-size: 0.68rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.caption {
+  margin: var(--space-2) 0 0;
+  padding-top: var(--space-2);
+  border-top: var(--hairline);
+  font-size: var(--fs-caption);
+  color: var(--muted);
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: var(--hairline);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.table {
+  width: 100%;
+  min-width: 36rem;
+  font-size: 0.76rem;
+}
+
+.table th,
+.table td {
+  padding: 0.4rem 0.55rem;
+  border-bottom: 1px solid var(--grid);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table thead th {
+  background: var(--surface-sunk);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+}
+
+.table tbody th {
+  font-weight: 600;
+}
+
+.num {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.72rem;
+  min-width: 14rem;
+}
+
+.total th,
+.total td {
+  background: var(--surface-sunk);
+  font-weight: 700;
+  border-top: 2px solid var(--rule);
+}
+
+.low {
+  color: var(--marker);
+}
+
+.medium {
+  color: var(--accent-b);
+}
+
+.high {
+  color: var(--accent-a);
+}
+
+@media (max-width: 520px) {
+  .row {
+    grid-template-columns: minmax(5.5rem, 6.5rem) 1fr;
+  }
+}
