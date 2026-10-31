@@ -202,7 +202,7 @@ export function PlotLayout() {
   return (
     <div className={styles.wrap}>
       <svg
-        viewBox="0 0 92 178"
+        viewBox="-9 -6 101 184"
         role="img"
         aria-labelledby="plotTitle plotDesc"
         className={styles.svg}
@@ -293,8 +293,8 @@ export function PlotLayout() {
               y={p.y}
               width="18"
               height="9"
-              fill={C.path}
-              stroke={C.planter}
+              fill={C.planter}
+              stroke="#6d4a29"
               strokeWidth="1"
             />
             <Badge x={p.x + 2} y={p.y + 2} label={p.id} tone="marker" />
@@ -317,8 +317,8 @@ export function PlotLayout() {
               y={p.y}
               width="18"
               height="9"
-              fill={C.path}
-              stroke={C.planter}
+              fill={C.planter}
+              stroke="#6d4a29"
               strokeWidth="1"
             />
             <Badge x={p.x + 2} y={p.y + 2} label={p.id} tone="marker" />
@@ -380,9 +380,9 @@ export function PlotLayout() {
           2 m
         </text>
 
-        {/* Dimensions. */}
-        <text x="40" y="176" fill={C.ink} fontSize="2.2" textAnchor="middle">
-          8 m across
+        {/* Dimensions: the width sits above the plot, as on the drawing. */}
+        <text x="40" y="-2.5" fill={C.ink} fontSize="2.4" textAnchor="middle">
+          8 m
         </text>
         <text
           x="0"
@@ -390,7 +390,7 @@ export function PlotLayout() {
           fill={C.ink}
           fontSize="2.2"
           textAnchor="middle"
-          transform="translate(2 78) rotate(-90)"
+          transform="translate(-4 78) rotate(-90)"
         >
           15.6 m
         </text>
