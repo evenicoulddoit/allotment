@@ -24,7 +24,7 @@ Crops in the same family share pests and diseases, so they travel together and n
 
 ## Design rules I used
 
-- Rodent-attractive plants live in the most-visited, most-fenced places: the tulip and ranunculus planters.
+- Rodent-attractive plants live in the most-visited, most-fenced places: the tulip and ranunculus planters (T, R) sit nearest the entrance, and the sweet pea planters (S1, S2) at the end of the main path, so damage shows quickly. Tulips and sweet peas are the likely targets.
 - Daffodils and alliums ring planters T and R. Mice, voles and squirrels avoid them, so they act as a living border.
 - Tall to the north, short to the south so nothing shades the cutting beds.
 - Aromatic herbs at the edges of vegetable beds to confuse pests. This reduces damage but does not replace netting.
